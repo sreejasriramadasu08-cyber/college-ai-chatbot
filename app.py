@@ -19,9 +19,11 @@ embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 # ChromaDB
 db_client = chromadb.PersistentClient(path="./chroma_db")
 
-collection = db_client.get_collection(
+collection = db_client.get_or_create_collection(
     name="college_documents"
 )
+
+Then click Commit changes in GitH
 
 # Streamlit page
 st.set_page_config(
